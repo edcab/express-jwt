@@ -44,6 +44,7 @@ exports.signin = (req, res) => {
 exports.requireSignin = expressJwt({
   secret: "mySecretKey",
   userProperty: "auth",
+  algorithms: ["HS256"],
 });
 
 exports.showuser = (req, res) => {
